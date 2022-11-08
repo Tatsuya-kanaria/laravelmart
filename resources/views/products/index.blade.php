@@ -1,14 +1,31 @@
-@foreach ($products as $product)
-    {{ $product->name }}
-    {{ $product->description }}
-    {{ $product->price }}
-    <a href="{{ route('products.show', $product->id) }}">Show</a>
-    <a href="{{ route('products.edit', $product->id) }}">edit</a>
-    <form action="{{ route('products.destroy', $product->id) }}" method="post" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <button type="submit">DELETE</button>
-    </form>
-@endforeach
+<a href="{{ route('products.create') }}">Create New Product</a>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category ID</th>
+        <th >Action</th>
+    </tr>
 
-<a href="{{ route('products.create') }}">New</a>
+    @foreach ($products as $product)
+    <tr>
+        <td>{{ $product->name }}</td>
+        <td>{{ $product->description }}</td>
+        <td>{{ $product->price }}</td>
+        <td>{{ $product->category_id }}</td>
+        <td>
+            <form action="{{ route('products.destroy', $product->id) }}" method="post" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+
+                <a href="{{ route('products.show', $product->id) }}">Show</a>
+
+                <a href="{{ route('products.edit', $product->id) }}">edit</a>
+
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+</table>
