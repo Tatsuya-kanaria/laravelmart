@@ -83,7 +83,7 @@
                     <label for="password-confirm" class="col-md-5 col-form-label text-md-left"></label>
 
                     <div class="col-md-7">
-                        <input type="password-confirm" id="password" class="form-control laravelmart-login-input" name="password_confirmation" required autocomplete="new-password">
+                        <input type="password" id="password-confirm" class="form-control laravelmart-login-input" name="password_confirmation" required autocomplete="new-password">
                     </div>
                 </div>
 
