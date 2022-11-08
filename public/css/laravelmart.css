@@ -1,0 +1,55 @@
+.laravelmart-login-input {
+    border-radius: 2px;
+    border: solid 1px #b2b2b2;
+    background-color: #fff;
+}
+
+.laravelmart-check-label {
+    font-family: YuGo;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+}
+
+.laravelmart-require-input-label {
+    border-radius: 1px;
+    background-color: #e2001b;
+}
+
+.laravelmart-require-input-label-text {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+}
+
+.laravelmart-submit-button {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    background-color: #0fbe9f;
+}
+
+.laravelmart-login-text {
+    font-family: YuGo;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0fbe9f;
+}
