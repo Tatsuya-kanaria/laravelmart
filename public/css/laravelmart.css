@@ -146,3 +146,29 @@ label {
     letter-spacing: normal;
     color: #0fbe9f;
 }
+
+/************* header **************/
+.laravelmart-header-container {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.laravelmart-header-search-input {
+    border:solid 1px #e5e5e5
+}
+
+.laravelmart-header-search-button {
+    background-color: #0fbe9f
+}
+
+.laravelmart-header-search-icon {
+    color: #fff;
+}
+
+.laravelmart-header-fav-icon {
+    color: #191919;
+}
+
+.laravelmart-header-shoppingcart-icon {
+    color: #fff;
+}
