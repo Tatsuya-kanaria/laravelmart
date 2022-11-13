@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    {{-- font awesome --}}
+    <script src="https://kit.fontawesome.com/cbfa4672fc.js" crossorigin="anonymous"></script>
 
     {{-- Styles --}}
     <link rel="stylesheet" href="{{ asset('css/laravelmart.css') }}">
@@ -75,7 +77,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 mb-5">
             @yield('content')
         </main>
     </div>

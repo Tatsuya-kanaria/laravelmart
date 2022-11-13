@@ -1,33 +1,34 @@
-<div>
-    <h2>New Products</h2>
-</div>
-<div>
-    <a href="{{ route('products.index') }}">&lt;&lt;Back</a>
-</div>
+@extends('layouts.app')
 
-<form method="POST" action="{{ route('products.store') }}">
-    @csrf
-    <div>
-        <strong>Name:</strong>
-        <input type="text" name="name" placeholder="Name">
+@section('content')
+    <div class="container">
+        <h1>新しい商品を追加</h1>
+
+        <form action="{{ route('products.store') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="product-name">商品名</label>
+                <input type="text" name="name" id="product-name" class="form-control" placeholder="商品名">
+            </div>
+            <div class="form-group">
+                <label for="product-description">商品説明</label>
+                <textarea name="description" id="product-description" class="form-control" placeholder="商品説明"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="product-price">価格</label>
+                <input type="number" name="price" id="product-price" class="form-control" placeholder="価格">
+            </div>
+            <div class="form-group">
+                <label for="product-category">カテゴリ</label>
+                <select name="category_id" id="product-category" class="form-control">
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">商品を登録</button>
+        </form>
+
+        <a href="{{ route('products.index') }}">商品一覧に戻る</a>
     </div>
-    <div>
-        <strong>Description:</strong>
-        <textarea style="height:150px" name="description" placeholder="Description"></textarea>
-    </div>
-    <div>
-        <strong>Price:</strong>
-        <input type="number" name="price" placeholder="Price">
-    </div>
-    <div>
-        <strong>Category:</strong>
-        <select name="category_id">
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-            @endforeach
-        </select>
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-</form>
+@endsection
