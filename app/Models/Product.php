@@ -10,6 +10,10 @@ class Product extends Model
     use HasFactory;
 
     public function category() {
-        return $this->belongTo(Category::class);
+        return $this->belongsTo(Category::class);
+    }
+
+    public function reviews() {
+        return $this->hasMany(Review::class);
     }
 }
