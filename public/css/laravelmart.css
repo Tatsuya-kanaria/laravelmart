@@ -172,3 +172,13 @@ label {
 .laravelmart-header-shoppingcart-icon {
     color: #fff;
 }
+
+.laravelmart-favorite-button {
+    border-radius: 2px;
+    border: solid 1px #0fbe9f;
+    background-color: #fff;
+}
+
+.text-favorite {
+    color: #0fbe9f;
+}
