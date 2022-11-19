@@ -53,7 +53,7 @@ class UserController extends Controller
     {
         $user = Auth::user();
 
-        if ($request->input('password') == $request->input('password_confiramation')) {
+        if ($request->input('password') == $request->input('password_confirmation')) {
             $user->password = bcrypt($request->input('password'));
             $user->update();
         } else {

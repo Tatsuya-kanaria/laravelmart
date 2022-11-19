@@ -9,10 +9,10 @@
                 <label for="password" class="col-md-3 col-form-label text-md-right">新しいパスワード</label>
 
                 <div class="col-md-7">
-                    <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="passwod" required autocomplete="new-password">
+                    <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                     @error('password')
-                    <span class="invalid-feedack" role="alert">
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ message }}</strong>
                     </span>
                     @enderror
