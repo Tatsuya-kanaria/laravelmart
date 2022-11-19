@@ -42,6 +42,11 @@
                             <label>マイページ</label>
                         </a>
                     </li>
+                    <li class="nav-item mr-5">
+                        <a href="{{ route('mypage.favorite') }}" class="nav-link">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </li>
                 @endguest
             </ul>
 
