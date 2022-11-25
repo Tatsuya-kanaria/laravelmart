@@ -60,7 +60,7 @@
             </div>
             <form method="post" action="{{route('carts.destroy')}}" class="d-flex justify-content-end mt-3">
                 @csrf
-                <input type="hidden" name="_method" value="DELETE">
+                @method('DELETE')
                 <a href="{{route('products.index')}}" class="btn laravelmart-favorite-button border-dark text-dark mr-3">
                     買い物を続ける
                 </a>

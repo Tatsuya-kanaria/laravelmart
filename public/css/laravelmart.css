@@ -205,6 +205,12 @@ label {
 .review-score-color {
     color: #0fbe9f;
 }
-.review-score-color:rocus {
+.review-score-color:focus {
     color: #0fbe9f;
+}
+
+.laravelmart-delete-submit-button {
+    border-radius: 2px;
+    color: #fff;
+    background-color: #d94b0e;
 }
