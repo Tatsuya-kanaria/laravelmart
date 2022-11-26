@@ -55,61 +55,25 @@
 
             <h1>新着商品</h1>
             <div class="row">
-                <div class="col-3">
-                    <a href="#">
-                        <img src="{{ asset('img/robot-vacuum-cleaner.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                ロボット掃除機<br>
-                                <label>￥55,000</label>
-                            </p>
+                @foreach ($recently_products as $recently_product)
+                    <div class="col-3">
+                        <a href="{{ route('products.show', $recently_product) }}">
+                            @if ($recently_product->image !== "")
+                                <img src="{{ asset($recently_product->image) }}" alt="img" class="img-thumbnail">
+                            @else
+                                <img src="img/dummy.png" alt="img" class="img-thumbnail">
+                            @endif
+                        </a>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="laravelmart-product-label mt-2">
+                                    {{ $recently_product->name }}<br>
+                                    <label>￥{{ $recently_product->price }}</label>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-3">
-                    <a href="#">
-                        <img src="{{ asset('img/sofa.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                3人掛けソファー<br>
-                                <label>￥35,000</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <a href="#">
-                        <img src="{{ asset('img/cup.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                コーヒーカップ<br>
-                                <label>￥1,000</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <a href="#">
-                        <img src="{{ asset('img/cutlery.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                食器 カトラリーセット1組<br>
-                                <label>￥2,000</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
