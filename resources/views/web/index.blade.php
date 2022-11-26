@@ -9,48 +9,25 @@
         <div class="col-9">
             <h1>おすすめ商品</h1>
             <div class="row">
-                <div class="col-4">
-                    <a href="#">
-                        <img src="{{ asset('img/chestnut.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                和栗の詰め合わせ<br>
-                                <label>￥2,000</label>
-                            </p>
+                @foreach ($recommend_products as $recommend_product)
+                    <div class="col-4">
+                        <a href="{{ route('products.show', $recommend_product) }}">
+                            @if ($recommend_product->image !== "")
+                                <img src="{{ asset($recommend_product->image) }}" alt="" class="img-thumbnail">
+                            @else
+                                <img src="{{ asset('img/dummy.png') }}" alt="" class="img-thumbnail">
+                            @endif
+                        </a>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="laravelmart-product-label mt-2">
+                                    {{ $recommend_product->name }}<br>
+                                    <label>￥{{ $recommend_product->price }}</label>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-4">
-                    <a href="#">
-                        <img src="{{ asset('img/persimmon.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                おいしい柿<br>
-                                <label>￥500</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-4">
-                    <a href="#">
-                        <img src="{{ asset('img/orange.jpg') }}" alt="" class="img-thumbnail">
-                    </a>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="laravelmart-product-label mt-2">
-                                旬なみかん<br>
-                                <label>￥1,200</label>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
             <h1>新着商品</h1>
