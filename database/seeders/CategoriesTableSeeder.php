@@ -39,7 +39,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $book_category,
                         'description' => $book_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => array_search($major_category_name, $major_category_names) + 1
                     ]);
                 }
             }
@@ -49,7 +49,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $computer_category,
                         'description' => $computer_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => array_search($major_category_name, $major_category_names) + 1
                     ]);
                 }
             }
