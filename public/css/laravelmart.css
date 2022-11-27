@@ -1,25 +1,3 @@
-@font-face {
-    font-family: YuGo;
-    src: local(YuGo-Medium),
-        url(/path/to/YuGo-Medium.woff2) format("woff2"),
-        url(/path/to/YuGo-Medium.woff) format("woff"),
-        url(/path/to/YuGo-Medium.ttf) format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: YuGo;
-    src: local(YuGo-Bold),
-        url(/path/to/YuGo-Bold.woff2) format("woff2"),
-        url(/path/to/YuGo-Bold.woff) format("woff"),
-        url(/path/to/YuGo-Bold.ttf) format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-}
-
 .laravelmart-login-input {
     border-radius: 2px;
     border: solid 1px #b2b2b2;
@@ -27,7 +5,12 @@
 }
 
 h1 {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 26px;
     font-weight: bold;
     font-stretch: normal;
@@ -37,7 +20,12 @@ h1 {
 }
 
 h2 {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 22px;
     font-weight: bold;
     font-stretch: normal;
@@ -47,7 +35,12 @@ h2 {
 }
 
 h3{
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 18px;
     font-weight: bold;
     font-stretch: normal;
@@ -57,7 +50,12 @@ h3{
 }
 
 big {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-stretch: normal;
@@ -67,7 +65,12 @@ big {
 }
 
 body {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 14px;
     font-weight: 500;
     font-stretch: normal;
@@ -77,7 +80,12 @@ body {
 }
 
 caption {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 12px;
     font-weight: 500;
     font-stretch: normal;
@@ -87,7 +95,12 @@ caption {
 }
 
 label {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
@@ -98,7 +111,12 @@ label {
 }
 
 .laravelmart-check-label {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 12px;
     font-weight: 500;
     font-stretch: normal;
@@ -114,7 +132,12 @@ label {
 }
 
 .laravelmart-require-input-label-text {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 14px;
     font-weight: 500;
     font-stretch: normal;
@@ -125,7 +148,12 @@ label {
 }
 
 .laravelmart-submit-button {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
@@ -137,7 +165,12 @@ label {
 }
 
 .laravelmart-login-text {
-    font-family: YuGo;
+    font-family: "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
