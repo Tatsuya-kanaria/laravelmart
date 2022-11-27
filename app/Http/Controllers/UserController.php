@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\ShoppingCart;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -108,5 +110,26 @@ class UserController extends Controller
     public function cart_history_show(Request $request)
     {
         $num = $request->num;
+        $user_id = Auth::user()->id;
+        $cart_info = DB::table('shoppingcart')->where('instance', $user_id)->where('number', $num)->get()->first();
+        Cart::instance($user_id)->restore($num);
+        $cart_contents = Cart::content();
+        Cart::instance($user_id)->store($num);
+        Cart::destroy();
+
+        DB::table('shoppingcart')->where('instance', $user_id)
+            ->where('number', null)
+            ->update(
+                [
+                    'code' => $cart_info->code,
+                    'number' => $num,
+                    'price_total' => $cart_info->price_total,
+                    'qty' => $cart_info->qty,
+                    'buy_flag' => $cart_info->buy_flag,
+                    'updated_at' => $cart_info->updated_at,
+                ]
+            );
+
+        return view('users.cart_history_show', compact('cart_contents', 'cart_info'));
     }
 }
