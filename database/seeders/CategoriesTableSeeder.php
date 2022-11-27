@@ -59,7 +59,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $display_category,
                         'description' => $display_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => array_search($major_category_name, $major_category_names) + 1
                     ]);
                 }
             }
