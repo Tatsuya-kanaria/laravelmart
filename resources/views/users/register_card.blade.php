@@ -12,7 +12,6 @@
                 <p>カード番号: ************{{ $card["last4"] }}</p>
             @endif
 
-            @push('scripts')
             <form action="{{ route('mypage.token') }}" method="post" class="text-center">
                 @csrf
                 @if (empty($card))
@@ -22,7 +21,6 @@
                 <script type="text/javascript" src="https://checkout.pay.jp/" class="payjp-button" data-key="{{ ENV('PAYJP_PUBLIC_KEY') }}" data-on-created="onCreated" data-text="カードを更新する" data-submit-text="カードを更新する"></script>
                 @endif
             </form>
-            @endpush
         </div>
     </div>
 @endsection
